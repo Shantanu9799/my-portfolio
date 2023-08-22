@@ -1,0 +1,114 @@
+.mask {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.intro-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+}
+
+.content .my-img {
+  width: auto;
+  height: 50vh;
+  position: absolute;
+  left: 160%;
+  top: -110px;
+  border-radius: 50%;
+}
+
+.mask::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.hero {
+  height: 100%;
+  width: 100%;
+}
+
+.hero .content {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  justify-content: center;
+  top: 50%;
+  left: 25%;
+  padding: 10px;
+}
+
+.hero .content h1 {
+  font-size: 4.2rem;
+  font-weight: 320;
+  padding: 0.6rem 0 1.5rem;
+  letter-spacing: 0.7vh;
+  position: fixed;
+  width: 110%;
+  top: 10;
+  height: 100px;
+  color: rgb(26, 206, 47);
+}
+
+.hero .content .context p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  word-spacing: 1.5vh;
+  letter-spacing: 1vh;
+  font-family: Garamond, serif;
+}
+
+.content .btn-section {
+  padding-top: 120px;
+}
+
+.content .btn {
+  margin: 1rem 0.7rem;
+}
+
+.hero h1 {
+  position: relative;
+}
+
+.context h1 .Cursor {
+  color: rgba(7, 162, 38, 0.707);
+  animation: blink 0.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Cursor {
+  transition: opacity 0.2s;
+}
+
+.Cursor:hover {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+@media screen and (max-width: 640px) {
+  .hero {
+    width: 100%;
+  }
+}
